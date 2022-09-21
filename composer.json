@@ -1,0 +1,10 @@
+{
+    "require": {
+        "illuminate/database": "v8.83.23",
+        "illuminate/events": "v8.83.23",
+        "jenssegers/mongodb": "v3.8.5"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^5.4"
+    }
+}
