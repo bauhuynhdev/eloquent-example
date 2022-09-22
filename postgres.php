@@ -1,5 +1,7 @@
 <?php
 
+require_once __DIR__ . '/bootstrap.php';
+
 use Illuminate\Database\Capsule\Manager as Capsule;
 use Illuminate\Events\Dispatcher;
 use Illuminate\Container\Container;
@@ -38,15 +40,16 @@ class User extends Illuminate\Database\Eloquent\Model
     protected $fillable = ['name', 'email'];
 }
 
+//User::all();
+
 $faker = Faker\Factory::create();
-for ($i = 1; $i <= 1000000; $i++) {
+for ($i = 1; $i <= 10000; $i++) {
     User::create(
         [
             'email' => $faker->email(),
             'name' => $faker->name()
         ]
     );
-    var_dump('Created: ' . $i);
 }
 
 var_dump('Total time: ' . $time);
