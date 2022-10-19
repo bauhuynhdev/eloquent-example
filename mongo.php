@@ -48,16 +48,16 @@ class User extends Jenssegers\Mongodb\Eloquent\Model
     protected $fillable = ['name', 'email'];
 }
 
-//User::all();
+User::all();
 
-$faker = Faker\Factory::create();
-for ($i = 1; $i <= 10000; $i++) {
-    User::create(
-        [
-            'email' => $faker->email(),
-            'name' => $faker->name()
-        ]
-    );
-}
+//$faker = Faker\Factory::create();
+//for ($i = 1; $i <= 200000; $i++) {
+//    User::create(
+//        [
+//            'email' => $faker->email(),
+//            'name' => $faker->name()
+//        ]
+//    );
+//}
 
 var_dump('Total time: ' . $time);
